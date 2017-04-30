@@ -1,0 +1,68 @@
+.services__block {
+    display: flex;
+
+    width: 100%;
+    max-width: 73.125rem;
+    margin-top: 1.2em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1.1em;
+    padding-right: 2.5em;
+    padding-bottom: 1.5em;
+    padding-left: 1.5em;
+
+    background-color: $color-background-darkt;
+
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: $tablet-max-width) {
+        display: inline-block;
+
+        padding-right: 0;
+        padding-left: 0;
+
+        text-align: center;
+        letter-spacing: -.35em;
+
+        & > * {
+            display: inline-block;
+
+            letter-spacing: normal;
+        }
+    }
+    @media screen and (max-width: $mobile-min-width) {
+        margin-top: 0;
+    }
+}
+
+.services {
+    //-когда уменьшаешь окно браузера, чтобы сработало свойство text-overflow: ellipsis, добавляющее "..." при переполнении
+    max-width: 78%;
+    margin-right: 2%;
+    @media screen and (max-width: $tablet-max-width) {
+        width: 100%;
+        margin-right: 0;
+
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 1.875rem;
+        //- 30px
+
+        color: $color-heading-gray;
+    }
+    &__text {
+        font-size: $font-size-text;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        color: $color-text-gray;
+        @media screen and (max-width: $tablet-max-width) {
+            margin-bottom: 1em;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+mixin buttonText
+     a()&attributes(attributes)
+        block
+
+mixin borderScreen
+    .central-slider__icon-decorative
+        svg.central-slider__icon-left(width="40" height="40")
+            use(xlink:href="/media/images/icons.svg#icon-ellipsis-h")
+        svg.central-slider__icon-right(width="20" height="20")
+            use(xlink:href="/media/images/icons.svg#icon-window-minimize")
+
+mixin blogContainer(href, dateforComp, date)
+    .blog__item
+        img(src=href class="blog__img" alt="")
+    p.blog__text
+        block
+        time(class="blog__time" datetime=dateforComp)
+            block=date
+
+mixin commentBlock
+    h4.comment__headering
+        | What client’s say ?                   
+    blockquote.comment__quote
+        p.comment__text
+            |Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum.              
+        footer.comment__author-name
+            |Jhon Doe

@@ -1,0 +1,346 @@
+.footer {
+    font-size: $font-size-text;
+
+    width: 100%;
+
+    color: $color-width-text;
+    background-color: $color-company-light;
+    background-image: url('../media/images/path_footer.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    &__container {
+        width: 100%;
+        max-width: 73.125rem;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 3.2em;
+        margin-left: auto;
+        padding-top: 3.5em;
+
+        letter-spacing: -.35em;
+
+        & > * {
+            display: inline-block;
+
+            vertical-align: top;
+            letter-spacing: normal;
+        }
+    }
+
+    &__contact {
+        width: 32%;
+        padding-top: .2em;
+        //отступ над первым и последним блоком чуть меньше, чем над центарльными
+        padding-left: .35em;
+        @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+            width: 50%;
+        }
+        @media screen and (max-width: $tablet-min-width) {
+            width: 100%;
+            margin-bottom: 2em;
+            padding: 0 5em;
+
+            text-align: center;
+        }
+    }
+    &__company {
+        width: 18%;
+        @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+            width: 25%;
+        }
+        @media screen and (max-width: $tablet-min-width) {
+            font-size: 1rem;
+
+            width: 40%;
+            margin: 2em 0 0 2em;
+        }
+        @media screen and (max-width: $mobile-min-width) {
+            font-size: 1rem;
+
+            display: block;
+
+            width: 100%;
+            max-width: 220px;
+            margin: 0 auto;
+            margin-bottom: 2em;
+        }
+    }
+    &__community {
+        width: 18%;
+        @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+            width: 25%;
+        }
+        @media screen and (max-width: $tablet-min-width) {
+            font-size: 1rem;
+
+            width: 40%;
+            margin: 2em 0 0 4em;
+        }
+        @media screen and (max-width: $mobile-min-width) {
+            font-size: 1rem;
+
+            display: block;
+
+            width: 100%;
+            max-width: 220px;
+            margin: 0 auto;
+            padding-left: .9em;
+        }
+    }
+    &__blog {
+        width: 32%;
+        @media screen and (min-width:  $mobile-min-width) and (max-width: $tablet-max-width) {
+            width: 100%;
+        }
+        @media screen and (max-width: $mobile-min-width) {
+            width: 100%;
+        }
+    }
+    &__logo {
+        display: inline-block;
+
+        margin-bottom: 1.6em;
+
+        text-align: left;
+
+
+        &-item {
+            //-задала белый цвет в logo.svg тк нет возможности поменять цвет, когда svg задано через <img ...>
+            width: 13.75rem;
+            height: 1.375rem;
+        }
+    }
+    &__text {
+        line-height: 1.9;
+    }
+    &__phone {
+        margin-top: 1.7em;
+        @media screen and (max-width: $mobile-min-width) {
+            text-align: center;
+        }
+    }
+
+    &__mail {
+        margin-top: .3em;
+    }
+    &__phone_name,
+    &__mail-name {
+        @media screen and (max-width: $mobile-min-width) {
+            display: block;
+
+            text-align: center;
+        }
+    }
+
+    &__phone-item,
+    &__mail-item {
+        font-size: $font-size-h5;
+        font-weight: 600;
+        font-style: italic;
+
+        padding-left: 1em;
+
+        color: $color-width-text;
+        @media screen and (max-width: $mobile-min-width) {
+            padding-left: 0;
+        }
+    }
+
+    &__license {
+        display: flex;
+
+        width: 100%;
+
+        background-color: $color-company-dark;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.company {
+    &__headering {
+        padding-bottom: .55em;
+        padding-left: 1.2em;
+        @media screen and (max-width: $mobile-min-width) {
+            padding-bottom: 0;
+            padding-left: 0;
+
+            text-align: center;
+        }
+    }
+    &__container {
+        line-height: 1.9;
+
+        padding-left: 3.5em;
+        @media screen and (max-width: $mobile-min-width) {
+            line-height: 2.3;
+
+            margin-bottom: 2em;
+        }
+    }
+}
+.community {
+    &__headering {
+        padding-bottom: .6em;
+        padding-left: .7em;
+        @media screen and (max-width: $mobile-min-width) {
+            padding-bottom: 0;
+            padding-left: 0;
+
+            text-align: center;
+        }
+    }
+    &__container {
+        line-height: 1.8;
+
+        padding-left: 2.6em;
+        @media screen and (max-width: $mobile-min-width) {
+            line-height: 2.3;
+
+            margin-bottom: 2em;
+        }
+    }
+}
+.company__headering,
+.community__headering {
+    font-size: $font-size-h5;
+
+    color: $color-footer-heading;
+}
+.company__container,
+.community__container {
+    list-style-type: none;
+}
+.company__icon,
+.community__icon {
+    fill: $color-width-text;
+}
+.company__link,
+.community__link {
+    text-decoration: none;
+
+    color: $color-width-text;
+    &:hover {
+        color: $color-footer-heading;
+    }
+}
+.blog {
+    &__headering {
+        font-size: $font-size-h5;
+
+        margin-bottom: 1.2em;
+        @media screen and (max-width: $tablet-max-width) {
+            margin-top: 1em;
+
+            text-align: center;
+        }
+    }
+    &-italic {
+        font-style: italic;
+    }
+    &-bold {
+        font-weight: 700;
+
+        text-transform: uppercase;
+    }
+    &__conreiner {
+        @media screen and (max-width: $tablet-max-width) {
+            width: 100%;
+
+            letter-spacing: -.35em;
+            & > * {
+                letter-spacing: normal;
+            }
+        }
+    }
+    &__row {
+        letter-spacing: -.35em;
+        & > * {
+            display: inline-block;
+
+            vertical-align: top;
+            letter-spacing: normal;
+        }
+        &:last-child {
+            margin-top: 1em;
+        }
+        @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+            display: inline-block;
+
+            width: 50%;
+            padding: 0 1em;
+        }
+        @media screen and (max-width: $tablet-min-width) {
+            width: 100%;
+            padding-right: 1em;
+            padding-left: 2em;
+        }
+    }
+    &__item {
+        position: relative;
+        z-index: 4;
+
+        overflow: hidden;
+
+        width: 20%;
+
+        border-radius: .5em;
+
+        &::before {
+            display: block;
+
+            padding-top: 100%;
+
+            content: '';
+        }
+    }
+    &__img {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+    &__text {
+        line-height: 1.5;
+
+        width: 80%;
+        padding-left: 1.3em;
+    }
+    &__time {
+        display: block;
+
+        color: $color-footer-heading;
+    }
+}
+.social {
+    &__link {
+        text-decoration: none;
+        &:not(:last-child) {
+            margin-right: 1.5em;
+        }
+    }
+    &__icon {
+        fill: $color-width-text;
+        &:hover {
+            fill: $color-footer-heading;
+        }
+    }
+}
+.license {
+    &__block {
+        padding-left: .6em;
+    }
+    &__container {
+        display: flex;
+
+        width: 100%;
+        max-width: 73.75rem;
+        margin: 0 auto;
+        padding: .8em 0;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+}

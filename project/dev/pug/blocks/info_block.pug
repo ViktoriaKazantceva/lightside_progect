@@ -1,0 +1,62 @@
+-
+  var infoList= [{
+      title: "Quisque at massa ipsum"
+  }, {
+      title: "Maecenas lorem augue, egestas"
+  }, {
+      title: "Cras vitae felist at lacus eleifend"
+  }, {
+      title: "Etiam auctor diam pellentesque"
+  }, {
+      title: "Nulla as massa at dolor"
+  }, {
+      title: "condimentum eleifend vitae vitae"
+  }];
+  
+-
+  var diagramList= [{
+      number: "50",
+      name: "suspendisse"
+  }, {
+      number: "70",
+      name: "maecenas"
+  }, {
+      number: "80",
+      name: "aliquam"
+  }, {
+      number: "100",
+      name: "habitasse"
+  }];
+  
+.info__container
+    .list
+        h4.list__headering
+            | Why choose us ?
+        ul.list__container
+            each item3 in infoList
+                li.list__item
+                    svg.list__icon(width="12" height="12")
+                        use(xlink:href="media/images/icons.svg#icon-arrow-right")
+                    = item3.title
+    
+    .info__comment.spacer
+        +commentBlock
+    
+    .info__central-block    
+        .info__text
+            |Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus 
+            a(href="#" class="info__text-link")
+                |vehicula mattis
+            |. Nulla ac massa at dolor condimentum eleifend vitae vitae urna.
+        .info__diagram
+            each item4 in diagramList
+                .diagram__container
+                    .diagram__color
+                        .diagram__center
+                            span.diagram__number
+                                = item4.number
+                        p.diagram__footer
+                            = item4.name
+                            
+    .info__comment.visible
+        +commentBlock

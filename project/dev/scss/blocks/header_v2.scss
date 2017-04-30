@@ -1,0 +1,328 @@
+.header {
+    width: 100%;
+    max-width: $width-layout;
+    margin: 0 auto;
+    padding-top: .45em;
+    padding-right: 8.5%;
+    padding-bottom: .6em;
+    padding-left: 8.8%;
+
+    background-color: $color-company-light;
+    background-image: url('../media/images/path_header.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.container {
+    display: flex;
+
+    width: 100%;
+
+    @media screen and (max-width: $tablet-max-width) {
+        flex-direction: column;
+
+        padding-top: .7em;
+        padding-bottom: .7em;
+    }
+}
+
+.navbar {
+    &__header {
+        display: flex;
+
+        width: 52%;
+
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: $tablet-max-width) {
+            width: 100%;
+        }
+    }
+    &__toggle {
+        display: none;
+
+        padding-top: .65em;
+        padding-right: .75em;
+        padding-bottom: .5em;
+        padding-left: .75em;
+
+        border: none;
+        border-radius: $border-radius-button;
+        outline: none;
+        background-color: $color-company-dark;
+        &:hover {
+            background-color: $color-active-light;
+        }
+        @media screen and (max-width: $tablet-max-width) {
+            display: block;
+        }
+    }
+    &__button-item {
+        transform: scale(1.5);
+
+        fill: $color-width-text;
+    }
+    &__collapse {
+        display: flex;
+
+        width: 100%;
+
+        align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: $tablet-max-width) {
+            display: none;
+        }
+    }
+}
+.logo {
+    @media screen and (max-width: $mobile-min-width) {
+        margin-left: 0;
+    }
+
+
+    &__item {
+        width: 13.75rem;
+        height: 1.375rem;
+        //-задала белый цвет в logo.svg тк нет возможности поменять цвет, когда svg задано через <img ...>
+    }
+}
+
+.nav {
+    display: flex;
+
+    width: 90%;
+    padding-left: 0;
+    //- обнуление отступа оставленного маркерами списка
+
+    list-style-type: none;
+
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: $tablet-max-width) {
+        display: block;
+
+        width: 100%;
+    }
+
+    &__item {
+        display: inline-block;
+
+        padding: .3em .9em;
+
+        border-radius: $border-radius-button;
+        &:hover {
+            background-color: $color-active-light;
+            box-shadow: 0 .25em 0 0 $color-active-dark;
+        }
+
+
+        @media screen and (max-width: $tablet-max-width) {
+            display: block;
+        }
+    }
+    &__item-portfolio {
+        position: relative;
+
+        padding-right: .9em;
+        padding-left: 1.9em;
+    }
+    &__icon-portfolio {
+        position: absolute;
+        top: .5em;
+        left: .5em;
+
+        cursor: pointer;
+
+        fill: $color-width-text;
+        &:hover {
+            border-radius: $border-radius-button;
+            background-color: $color-active-dark;
+        }
+        @media screen and (max-width: $tablet-max-width) {
+            transform: scale(1.3);
+        }
+    }
+    &__link {
+        font-size: $font-size-text;
+        font-weight: 600;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: $color-width-text;
+        border-radius: $border-radius-button;
+        @media screen and (max-width: $tablet-max-width) {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+    }
+
+    &__form-search {
+        position: relative;
+
+        display: inline-block;
+        float: right;
+
+        padding-right: .1em;
+        //-выравнивание иконки поиска
+        @media screen and (max-width: $tablet-max-width) {
+            display: block;
+
+            width: 100%;
+            margin-top: -1em;
+            margin-bottom: 1em;
+            padding: 0;
+        }
+    }
+    &__input {
+        position: absolute;
+        top: .1em;
+        right: 2.5em;
+
+        display: none;
+
+        width: 15em;
+        height: 30px;
+
+        border: none;
+        border-radius: $border-radius-button;
+        outline: none;
+        @media screen and (max-width: $tablet-max-width) {
+            top: .5em;
+            left: 0;
+
+            width: 93%;
+            margin-left: 3em;
+        }
+        @media screen and (max-width: $mobile-min-width) {
+            width: 80%;
+        }
+    }
+    &__button {
+        padding-top: .5em;
+        padding-right: .5em;
+        padding-bottom: .2em;
+        padding-left: .5em;
+
+        border: none;
+        border-radius: $border-radius-button;
+        outline: none;
+        background-color: transparent;
+        @media screen and (max-width: $tablet-max-width) {
+            margin-top: .3em;
+            margin-left: .5em;
+        }
+
+        &:hover {
+            background-color: $color-active-light;
+            box-shadow: 0 .25em 0 0 $color-active-dark;
+        }
+        &-item {
+            // иконка поиска
+            fill: $color-width-text;
+        }
+    }
+}
+.active-pages {
+    //-стили для элементов li, вложенных в.nav, указывающих, на какой странице находимся
+    background-color: $color-company-dark;
+    box-shadow: 0 .25em 0 0 $color-box-shadow-menu;
+}
+
+.portfolio-list {
+    font-size: $font-size-text;
+
+    position: absolute;
+    z-index: 5;
+    //- чтобы спозиционированное меню было выше слайдера
+    top: 3.65em;
+    left: -.3em;
+
+    display: none;
+    //-скрыть выпадающий список
+
+    width: 15.6em;
+    height: 8.6em;
+    padding: .3em;
+
+    list-style-type: none;
+
+    border-radius: $border-radius-button;
+    background-color: $color-active-dark;
+
+
+    @media screen and (max-width: $tablet-max-width) {
+        font-size: .9rem;
+
+        position: relative;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        padding: 0;
+
+        background-color: transparent;
+    }
+    &::before {
+        //-треугольник комментария сверху блока выпадающего меню
+        position: absolute;
+        top: -1.1em;
+        left: .8em;
+
+        content: '';
+
+        border: .6em solid  transparent;
+        border-bottom: .6em solid $color-active-dark;
+        @media screen and (max-width: $tablet-max-width) {
+            border: none;
+        }
+    }
+    &__item {
+        margin-bottom: .2em;
+        padding: .5em 0;
+
+        border-radius: $border-radius-button;
+        background-color: $color-active-light;
+        @media screen and (max-width: $tablet-max-width) {
+            //отступ нужен, чтобы svg иконка не высовывалась слева
+            padding-left: .5em;
+            &:nth-child(2) {
+                //-чтобы первый пунки меню по высоте был равен двум другим
+                padding-top: .2em;
+                padding-bottom: .2em;
+            }
+        }
+        &:hover {
+            background-color: $color-company-light;
+            .portfolio-list__button-item,
+            .portfolio-list__link {
+                background-color: $color-company-light;
+            }
+        }
+    }
+    &__button-item {
+        padding-left: .8em;
+
+        fill: $color-width-text;
+        @media screen and (max-width: $tablet-max-width) {
+            padding: 0;
+            padding-left: 0;
+
+            transform: scale(1.3);
+        }
+    }
+    &__link {
+        //-чтобы ссылка закрывала бОльшую часть li элемента
+        padding: .3em .9em;
+
+        text-decoration: none;
+
+        color: $color-width-text;
+        @media screen and (max-width: $tablet-max-width) {
+            font-size: 1rem;
+        }
+        @media screen and (max-width: $mobile-min-width) {
+            font-size: .9rem;
+        }
+    }
+}

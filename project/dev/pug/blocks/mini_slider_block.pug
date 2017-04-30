@@ -1,0 +1,46 @@
+-
+  var miniSliderList= [{
+      href:"media/image-p/jQuery.png",
+      alt: ""
+  },{
+      href:"media/image-p/img_1.jpg",
+      alt: ""
+  },{
+      href:"media/image-p/img_2.jpg",
+      alt: ""
+  },{
+      href:"media/image-p/img_3.jpg",
+      alt: ""
+  },{
+      href:"media/image-p/img_4.jpg",
+      alt: ""
+  },{
+      href:"media/image-p/img_2.jpg",
+      alt: ""
+  },{
+      href:"media/image-p/img_3.jpg",
+      alt: ""
+  },{
+      href:"media/image-p/img_1.jpg",
+      alt: ""
+  }];
+
+.mini-slider
+    .mini-slider__header
+        h3.mini-slider__header-heading
+                | Our happy clients
+        .mini-slider__header-line
+            
+        button.mini-slider__header-btn-left
+            svg.mini-slider__header-btn-left-icon(width="20" height="20")
+                use(xlink:href= "media/images/icons.svg#icon-chevron-left")
+
+        button.mini-slider__header-btn-right
+            svg.mini-slider__header-btn-right-icon(width="20" height="20")
+                use(xlink:href= "media/images/icons.svg#icon-chevron-right")
+    .mini-slider-conteiner
+        each item8 in miniSliderList
+            .mini-slider-conteiner__item
+                img(src= item8.href class="mini-slider-conteiner__img" alt= item8.alt)
+
+                                        

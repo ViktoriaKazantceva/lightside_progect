@@ -1,0 +1,53 @@
+//- светло-бирюзовый цвет - header, footer, полугруглые диаграммы
+$color-company-light: rgb(110, 201, 188);
+//- темно-бирюзовый цвет - нижняя полоса footer
+$color-company-dark: rgb(97, 180, 167);
+//- красный цвет - цвет активных элементов - кнопок, блоко, заголовков, полукруглых диаграммах
+$color-active-light: rgb(226, 83, 75);
+//- темно-красный цвет - нижняя тень у активных кнопок
+$color-active-dark: rgb(221, 52, 52);
+//- светло-серый цвет фона
+$color-background-light: rgb(242, 242, 242);
+//- темно-серый цвет фона
+$color-background-darkt: rgb(236, 236, 236);
+//- светло-серый цвет блоков и комментария в index
+$color-block-light: rgb(247, 247, 247);
+//- белый текст
+$color-width-text: rgb(255, 255, 255);
+//- серый заголовок
+$color-heading-gray: rgb(127, 140, 140);
+//- серый текст
+$color-text-gray: rgb(119, 119, 119);
+//- серый цвет кнопок со стрелками в слайдерах
+$color-btn-passive: rgb(152, 163, 163);
+//-тень элементов header
+$color-box-shadow-menu: rgb(82, 139, 134);
+//- серый цвет кнопок переключения под главным слайдером
+$color-btn-main-slider: rgb(170, 178, 180);
+//- темно-серый цвет главного слайдера в index и заголовков h
+$color-main-slider: rgb(119, 133, 132);
+//- серый цвет кнопок панели под главным слайдером
+$color-main-slider-status-bar-bun: rgb(178, 185, 186);
+//-темно-серый фон блока с текстом в слайдере
+$color-main-slider-info-dark: rgb(55, 62, 62);
+//- серая линия в слайдере Our Happy Clients
+$color-mini-slider-line: rgb(222, 223, 223);
+//- рамоки у изображений в центральном слайдере
+$color-central-slider-border: rgb(188, 194, 196);
+//- заголовки h5 в footer
+$color-footer-heading: rgb(51, 93, 88);
+
+//- border-radius бОльшей часть кнопок, болков и иконок
+$border-radius-button: .3em;
+
+//- 13px
+$font-size-text: .8rem;
+//- 20px
+$font-size-h5: 1.25rem;
+
+$mobile-min-width: 480px;
+$tablet-min-width: 600px;
+$mobile-max-width: 768px;
+$tablet-max-width: 991px;
+$screen-min-width: 1120px;
+$width-layout: 1500px;

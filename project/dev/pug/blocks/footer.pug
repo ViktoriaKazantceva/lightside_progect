@@ -1,0 +1,103 @@
+-
+  var companyList= [{
+      title: "About"
+  }, {
+      title: "FAQ"
+  }, {
+      title: "Contact"
+  }, {
+      title: "Terms"
+  }, {
+      title: "Privacy"
+  }, {
+      title: "Testimonials"
+  }];
+  
+-
+  var communityList= [{
+      title: "Blog"
+  }, {
+      title: "Forum"
+  }, {
+      title: "Support"
+  }, {
+      title: "Newsletter"
+  }];
+
+-
+  var socialList= [{
+      href:"#",
+      iconhref: "media/images/icons.svg#icon-facebook"
+  }, {
+      href:"#",
+      iconhref: "media/images/icons.svg#icon-google-plus"
+  }, {
+      href:"#",
+      iconhref: "media/images/icons.svg#icon-tumblr"
+  }, {
+      href:"#",
+      iconhref: "media/images/icons.svg#icon-feed"
+  }];
+
+footer.footer
+    .footer__container
+        .footer__contact
+            .footer__logo
+                img.footer__logo-item(src="media/images/logo.svg" alt="Modusversus")
+            p.footer__text
+                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec.
+            .footer__phone
+                span.footer__phone_name
+                    |Phone:
+                span.footer__phone-item
+                    |182 2569 5896
+            .footer__mail
+                span.footer__mail-name
+                    |e-mail:
+                span.footer__mail-item
+                    |info@modu.versus
+    
+        .footer__company
+            h5.company__headering
+                |Company
+            ul.company__container
+                each item5 in companyList
+                    li.company__item
+                        svg.company__icon(width="16" height="16")
+                            use(xlink:href="media/images/icons.svg#icon-angle-right")
+                        a(href="#" class="company__link")
+                            = item5.title
+    
+        .footer__community
+            h5.community__headering
+                |Community
+            ul.community__container       
+                each item6 in communityList
+                    li.community__item
+                        svg.community__icon(width="16" height="16")
+                            use(xlink:href="media/images/icons.svg#icon-angle-right")
+                        a(href="#" class="community__link")
+                            = item6.title
+        .footer__blog
+            h5.blog__headering
+                span.blog-italic
+                    |from the 
+                span.blog-bold
+                    |blog
+            .blog__conreiner
+                .blog__row
+                    +blogContainer("media/image-p/foto_1.png","2013-05-26","26 May, 2013")
+                        |Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                .blog__row
+                    +blogContainer("media/image-p/foto_2.png","2014-01-11","11 January, 2014")
+                        |Nonummy nibh euismod tincidunt ut laoreet dolore   
+
+    .footer__license
+        .license__container
+            p.license__block
+                |2013 ModusVersus
+            .social__block
+                each item7 in socialList
+                    a(href=item7.href class="social__link")
+                        svg(class="social__icon" width="25" height="25")
+                            use(xlink:href=item7.iconhref)

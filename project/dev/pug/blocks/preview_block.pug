@@ -1,0 +1,37 @@
+-
+    var previewMass =[{
+        id: "icon-thumbs-o-up",
+        icon: "media/images/icons.svg#icon-thumbs-o-up",
+        heading: "suspendisse",
+        text:"Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc."
+        
+    },{
+        id: "icon-key",
+        icon: "media/images/icons.svg#icon-key",
+        heading: "maecenas",
+        text:"Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo."
+        
+    },{
+        id: "icon-flag",
+        icon: "media/images/icons.svg#icon-flag",
+        heading: "aliquam",
+        text:"Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non."
+        
+    },{
+        id: "icon-flask",
+        icon: "media/images/icons.svg#icon-flask",
+        heading: "habitasse",
+        text:"Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non."
+        
+    }]
+.preview-block
+    each item in previewMass
+        .preview
+            .preview-item(id = item.id + "-container")
+                svg.preview-item__icon(width="60" height="60" id= item.id)
+                    use(xlink:href= item.icon)
+                h3.preview-item__heading= item.heading
+                p.preview-item__text= item.text
+            block button
+                +buttonText(href='#' onmouseover="setActiveColor('#" + item.id + "')" onmouseout="unsetActiveColor('#" + item.id + "')" class="button button__passive button-preview")
+                    | read more

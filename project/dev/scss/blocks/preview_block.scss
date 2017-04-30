@@ -1,0 +1,101 @@
+.preview-block {
+    width: 100%;
+    max-width: 73.125rem;
+    margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+
+    letter-spacing: -.35em;
+}
+
+.preview {
+    position: relative;
+
+    display: inline-block;
+
+    width: 23.5%;
+
+    vertical-align: top;
+    letter-spacing: normal;
+
+
+
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+
+        height: 19.5rem;
+        padding-top: 3em;
+        padding-right: 1.2em;
+        //-чтобы при переполнении блока с текстом, текст не заходил под кнопку
+        padding-bottom: 2.5em;
+        padding-left: 1em;
+
+        border-radius: $border-radius-button;
+        background-color: $color-block-light;
+        box-shadow: 0 .3em 0 0 $color-background-darkt;
+
+        align-items: center;
+        &__icon {
+            min-width: 3.75rem;
+            min-height: 3.75rem;
+
+            fill: $color-company-light;
+        }
+        &__heading {
+            font-size: 1rem;
+
+            margin-top: .6em;
+            margin-bottom: 1.6em;
+
+            text-transform: uppercase;
+
+            color: $color-heading-gray;
+        }
+
+        &__text {
+            font-size: .8125rem;
+            line-height: 1.6;
+
+            overflow: auto;
+            //-чтобы не переполнялся блок
+
+            text-align: center;
+
+            color: $color-text-gray;
+        }
+    }
+    &:not(:last-child) {
+        margin-right: 2%;
+    }
+    @media screen and (min-width: $mobile-max-width) and (max-width: $tablet-max-width) {
+        width: 49%;
+        margin-bottom: 3em;
+
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+        &:nth-child(odd) {
+            margin-right: 2%;
+        }
+    }
+    @media screen and (max-width: $mobile-max-width) {
+        width: 100%;
+        margin-bottom: 3em;
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+        &:nth-child(odd) {
+            margin-right: 0;
+        }
+    }
+}
+
+.preview__icon--active {
+    fill: $color-active-light;
+}
+.preview--active {
+    background-color: $color-width-text;
+}

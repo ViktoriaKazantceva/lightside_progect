@@ -1,0 +1,29 @@
+extends ../base/base.pug
+block header
+    include ../blocks/header_v2.pug
+block main
+    main
+        block main_slider
+            include ../blocks/main_slider_block.pug
+        block services_block
+            .services__block
+                    include ../blocks/services_block.pug
+                    block button
+                        +buttonText(href="#" class="button button__passive button-services")
+                            | View more
+     
+        block preview
+            include ../blocks/preview_block.pug
+            
+        block central_slider
+            include ../blocks/central_slider_block.pug
+            
+        block info_for_us
+            include ../blocks/info_block.pug
+
+            
+        block mini_slider
+            include ../blocks/mini_slider_block.pug
+            
+        block mini_slider
+            include ../blocks/footer.pug

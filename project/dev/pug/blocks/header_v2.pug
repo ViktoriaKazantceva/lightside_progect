@@ -1,0 +1,81 @@
+-
+  var pages = [{
+    id: "home",
+    href: "#",
+    title: "Home"
+  }, {
+    id: "about",
+    href: "#",
+    title: "About"
+  }, {
+    id: "services",
+    href: "#",
+    title: "Services"
+  }, {
+    id: "portfolio",
+    href: "#",
+    title: "Portfolio"
+  }, {
+    id: "blog",
+    href: "#",
+    title: "Blog"
+  }, {
+    id: "features",
+    href: "#",
+    title: "Features"
+  }, {
+    id: "contacts",
+    href: "#",
+    title: "Contacts"
+  }];
+
+- var currentPage = "home"
+
+-
+  var portfolio_list = [{
+     id: "portfolio-page-1",
+     href: "#",
+     title: "Portfolio 1 column page"
+  }, {
+      id: "portfolio-page-2",
+      href: "#",
+      title: "Portfolio 2 column page"
+  }, {
+      id: "portfolio-page-3",
+      href: "#",
+      title: "Portfolio 3 column page"
+  }]; 
+  
+header.header
+    nav.navbar
+        .container
+            .navbar__header
+                .logo
+                    img.logo__item(src="media/images/logo.svg" alt="Modusversus")
+                button.navbar__toggle
+                    svg.navbar__button-item(width="16" height="16")
+                        use(xlink:href="/media/images/icons.svg#icon-bars")
+            .navbar__collapse(id="navbar-collapse")
+                ul.nav
+                    each item in pages
+                        if item.id == 'portfolio'
+                            li.nav__item.nav__item-portfolio(class=(item.id == 'portfolio') ? "portfolio-elem-active": "" id=item.id)
+                                svg.nav__icon-portfolio(width="16" height="16")
+                                    use(xlink:href="media/images/icons.svg#icon-angle-down")
+                                a.nav__link(href=item.href)= item.title
+                                    ul.portfolio-list
+                                        each item2 in portfolio_list
+                                            li.portfolio-list__item
+                                                svg.portfolio-list__button-item(width="16" height="16")
+                                                    use(xlink:href="media/images/icons.svg#icon-angle-right")
+                                                a.portfolio-list__link(href=item2.href)= item2.title
+                        else
+                            li.nav__item(class=(currentPage === item.id) ? "active-pages": "")
+                                a.nav__link(href=item.href)= item.title    
+                                        
+                form.nav__form-search(onsubmit="return false")
+                    button.nav__button
+                        svg.nav__button-item(width="16" height="16")
+                            use(xlink:href="/media/images/icons.svg#icon-search")
+                    input.nav__input(type="search" placeholder="Search" onfocusout="hideSiteSearch()")
+                    

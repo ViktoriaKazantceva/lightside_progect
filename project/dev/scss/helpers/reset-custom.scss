@@ -1,0 +1,27 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    box-sizing: border-box;
+    //-чтобы padding и border входили в указанный размер блока
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    //-чтобы padding и border входили в указанный размер блока
+}
+blockquote {
+    margin-right: 0;
+    //- убрать отступ у цитаты
+}

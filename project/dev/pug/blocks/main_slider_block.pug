@@ -1,0 +1,29 @@
+-
+  var mainSliderList= [{
+      href:"media/image-p/img_1.jpg",
+      alt: ""
+  },{
+      href:"media/image-p/img_2.jpg",
+      alt: ""
+  },{
+      href:"media/image-p/img_3.jpg",
+      alt: ""
+  }]
+  
+.slider
+    button.slider__btn-left
+        svg.slider__btn-left-icon(width="40" height="40")
+            use(xlink:href= "media/images/icons.svg#icon-angle-double-left")
+        
+    button.slider__btn-right
+        svg.slider__btn-right-icon(width="40" height="40")
+            use(xlink:href= "media/images/icons.svg#icon-angle-double-right")
+    .slider__info
+        h1.slider__heading
+            | Vestibulum 
+        p.slider__text
+            | Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+    .slider-conteiner
+        each item9 in mainSliderList
+            .slider-conteiner_item
+                img(src= item9.href class="main-slider_img" alt= item9.alt)

@@ -1,0 +1,165 @@
+.slider {
+    position: relative;
+
+    height: 100%;
+    max-height: 33.2rem;
+    margin: 0 auto;
+
+    &__info {
+        position: absolute;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        //для центровки текста и заголовка в слайдере
+
+        width: 100%;
+        max-height: 31.25rem;
+
+        background-color: rgba(0, 0, 0, 0);
+
+        align-items: center;
+        justify-content: flex-start;
+        @media screen and (max-width: $tablet-max-width) {
+            height: 100%;
+
+            justify-content: center;
+        }
+    }
+    &__heading {
+        font-size: 3.125rem;
+        font-weight: 800;
+        line-height: 1;
+        //- чтобы сделать блок h1 меньше по высоте
+
+        margin-top: 3.25em;
+        padding: 0 10px;
+
+        text-transform: uppercase;
+
+        color: $color-width-text;
+        border-radius: .1em;
+        background-color: $color-active-dark;
+        @media screen and (max-width: $tablet-max-width) {
+            margin-top: 0;
+        }
+        @media screen and (max-width: $mobile-min-width) {
+            font-size: 2.7em;
+        }
+    }
+    &__text {
+        line-height: 1.8;
+
+        overflow: auto;
+        //-от переполнения контента
+
+        width: 100%;
+        max-width: 29.5em;
+        margin-top: .625em;
+        margin-bottom: 5em;
+        //-от переполнения контента
+        padding: .5em 1.25em;
+
+        text-align: center;
+
+        color: $color-width-text;
+        border-radius: $border-radius-button;
+        background-color: $color-main-slider-info-dark;
+    }
+}
+
+.slider__btn-left,
+.slider__btn-right {
+    position: absolute;
+    z-index: 3;
+    top: 13.8em;
+
+    width: 3.125em;
+    height: 3.5em;
+
+    border: none;
+    outline: none;
+    background-color: $color-active-light;
+    box-shadow: 0 .2em 0 0 $color-active-dark;
+    @media screen and (max-width: $tablet-min-width) {
+        top: 0;
+    }
+}
+.slider__btn-left {
+    left: 0;
+
+    border-top-right-radius: $border-radius-button;
+    border-bottom-right-radius: $border-radius-button;
+}
+.slider__btn-right {
+    right: 0;
+
+    border-top-left-radius: $border-radius-button;
+    border-bottom-left-radius: $border-radius-button;
+}
+.slider__btn-left-icon,
+.slider__btn-right-icon {
+    position: absolute;
+    //-чтобы иконки на iPhon отображались по середине кнопки
+    top: .5em;
+    left: .5em;
+
+    fill: $color-width-text;
+}
+.slider__btn-left-icon {
+    margin-left: -.3em;
+}
+.slider__btn-right-icon {
+    margin-right: -.3em;
+}
+.status-bar {
+    display: flex;
+
+    padding-left: 0;
+    //-обнулить отступ, оставленный маркерами списка
+
+    justify-content: center;
+    li {
+        list-style-type: none;
+        &:not(:first-child) {
+            margin-left: .625em;
+        }
+
+        button {
+            width: 3.75em;
+            height: .3em;
+            margin-top: .3em;
+
+            color: transparent;
+            border: none;
+            outline: none;
+            background-color: $color-main-slider-status-bar-bun;
+        }
+    }
+}
+
+.slider-conteiner_item {
+    height: 100%;
+    max-height: 31.25rem;
+
+    background-color: $color-main-slider;
+    @media screen and (max-width: $tablet-min-width) {
+        height: 100%;
+        min-height: 25rem;
+    }
+}
+.main-slider_img {
+    width: 100%;
+    height: auto;
+
+    @media screen and (max-width: $tablet-min-width) {
+        height: 100%;
+        min-height: 25rem;
+
+        object-fit: cover;
+    }
+}
+.slick-active.slick-active button {
+    background-color: $color-active-light;
+    //- повышен приоритет свойства
+}

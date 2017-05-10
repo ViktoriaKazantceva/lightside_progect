@@ -37,7 +37,7 @@
 
         text-transform: uppercase;
 
-        color: $color-width-text;
+        color: $color-white;
         border-radius: .1em;
         background-color: $color-active-dark;
         @media screen and (max-width: $tablet-max-width) {
@@ -62,7 +62,7 @@
 
         text-align: center;
 
-        color: $color-width-text;
+        color: $color-white;
         border-radius: $border-radius-button;
         background-color: $color-main-slider-info-dark;
     }
@@ -104,7 +104,7 @@
     top: .5em;
     left: .5em;
 
-    fill: $color-width-text;
+    fill: $color-white;
 }
 .slider__btn-left-icon {
     margin-left: -.3em;

@@ -13,7 +13,8 @@ $color-background-darkt: rgb(236, 236, 236);
 //- светло-серый цвет блоков и комментария в index
 $color-block-light: rgb(247, 247, 247);
 //- белый текст
-$color-width-text: rgb(255, 255, 255);
+$color-white: rgb(255, 255, 255);
+//-$color-width-text: rgb(255, 255, 255);
 //- серый заголовок
 $color-heading-gray: rgb(127, 140, 140);
 //- серый текст
@@ -36,6 +37,10 @@ $color-mini-slider-line: rgb(222, 223, 223);
 $color-central-slider-border: rgb(188, 194, 196);
 //- заголовки h5 в footer
 $color-footer-heading: rgb(51, 93, 88);
+//-темно-бирюзовый цвет иконок социальных сетей внутри 4х блоков
+$color-social-networks: rgb(130, 189, 183);
+//-светло-бирюзовый цвет фона 4х блоков при наведении
+$color-backgroune-social-networks: rgb(145, 210, 204);
 
 //- border-radius бОльшей часть кнопок, болков и иконок
 $border-radius-button: .3em;

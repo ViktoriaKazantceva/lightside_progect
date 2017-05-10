@@ -1,0 +1,8 @@
+@mixin inline-block-fix {
+    letter-spacing: -.35em;
+    & > * {
+        display: inline-block;
+
+        letter-spacing: normal;
+    }
+}

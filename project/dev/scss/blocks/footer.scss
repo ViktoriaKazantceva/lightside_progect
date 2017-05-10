@@ -3,7 +3,7 @@
 
     width: 100%;
 
-    color: $color-width-text;
+    color: $color-white;
     background-color: $color-company-light;
     background-image: url('../media/images/path_footer.png');
     background-repeat: no-repeat;
@@ -140,7 +140,7 @@
 
         padding-left: 1em;
 
-        color: $color-width-text;
+        color: $color-white;
         @media screen and (max-width: $mobile-min-width) {
             padding-left: 0;
         }
@@ -213,13 +213,13 @@
 }
 .company__icon,
 .community__icon {
-    fill: $color-width-text;
+    fill: $color-white;
 }
 .company__link,
 .community__link {
     text-decoration: none;
 
-    color: $color-width-text;
+    color: $color-white;
     &:hover {
         color: $color-footer-heading;
     }
@@ -322,7 +322,7 @@
         }
     }
     &__icon {
-        fill: $color-width-text;
+        fill: $color-white;
         &:hover {
             fill: $color-footer-heading;
         }

@@ -1,0 +1,44 @@
+-
+    var teamMass =[{
+        id: "worker_1",
+        img: "media/image-p/you.jpg",
+        name: "Jhon DOE",
+        text:"Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus vehicula mattis. Nulla ac massa at dolor condimentum."
+        
+    },{
+        id: "worker_2",
+        img: "media/image-p/you.jpg",
+        name: "Jhon DOE",
+        text:"Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo."
+        
+    },{
+        id: "worker_3",
+        img: "media/image-p/you.jpg",
+        name: "Jhon DOE",
+        text:"Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non."
+        
+    },{
+        id: "worker_4",
+        img: "media/image-p/you.jpg",
+        name: "Jhon DOE",
+        text:"Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non.."
+        
+    }]
+
+.team-center-block__container
+    h2.team-center-block__headering
+        |Our team
+    .preview-block
+        each item8 in teamMass
+            .team
+                .team-item(onmouseover="setHoverColor('#" + item8.id + "')" onmouseout="unsetHoverColor('#" + item8.id + "')")
+                    img(src= item8.img class="team__img")
+                    .team-item-active
+                        p.team__text= item8.text
+                    
+                        block social_button
+                            include ../blocks/social_button_block.pug
+                
+                block button
+                    +buttonText(href='#' class="button button-center-block button__passive button-team")
+                        = item8.name

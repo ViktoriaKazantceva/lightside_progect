@@ -1,0 +1,22 @@
+.text-left {
+    &__container {
+        width: 100%;
+        max-width: 73.125rem;
+        margin: 0 auto;
+    }
+    &__headering {
+        font-size: 32px;
+        font-weight: 400;
+
+        margin-top: 1.4em;
+
+        color: $color-active-light;
+    }
+    &__item {
+        font-size: 14px;
+        line-height: 1.5;
+
+        margin-top: 1em;
+        margin-bottom: 1.4em;
+    }
+}

@@ -1,0 +1,27 @@
+extends ../base/base.pug
+block vars
+    -var pageTitle = 'About us';
+block header
+    include ../blocks/header_v2.pug
+block main
+    main
+        block breadcrumbs
+            include ../blocks/breadcrumbs.pug
+            
+        block text-left
+                include ../blocks/text_left_block.pug
+        
+        block info_for_us
+            include ../blocks/info_block.pug
+        
+        block team_center_block
+            include ../blocks/team_center_block.pug
+            
+        block info_for_us
+            include ../blocks/text_center_block.pug
+        
+        block mini_slider
+            include ../blocks/mini_slider_block.pug
+
+block footer
+    include ../blocks/footer.pug

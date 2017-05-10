@@ -1,0 +1,51 @@
+.social-networks-block {
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+
+    width: 100%;
+    max-width: 12rem;
+
+    transform: translate(-50%);
+
+    @include inline-block-fix;
+
+    &__link {
+        position: relative;
+
+        width: 21.5%;
+        height: 2.5rem;
+
+        text-decoration: none;
+
+        border-radius: $border-radius-button;
+        background-color: $color-social-networks;
+        &:not(:last-child) {
+            margin-right: 4%;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        margin: auto;
+
+        fill: $color-white;
+    }
+}
+.visually-hidden {
+    position: absolute !important;
+
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+}

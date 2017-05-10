@@ -1,0 +1,27 @@
+-
+    var socialMass =[{
+        href:"#",
+        icon: "media/images/icons.svg#icon-facebook",
+        text: "facebook"
+    },{
+         href:"#",
+        icon: "media/images/icons.svg#icon-twitter",
+        text: "twitter"
+    },{
+        href:"#",
+        icon: "media/images/icons.svg#icon-google-plus",
+        text: "google plus"
+    },{
+        href:"#",
+        icon: "media/images/icons.svg#icon-linkedin",
+        text: "linkedin"
+    }]
+//- в поле text хранится название соц.сети для скринридеров
+
+.social-networks-block
+    each item9 in socialMass
+        a(href=item9.href class="social-networks-block__link")
+            span.visually-hidden= item9.text
+            svg.social-networks-block__icon(width="25" height="25")
+                use(xlink:href= item9.icon)
+            

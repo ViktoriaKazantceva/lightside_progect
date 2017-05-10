@@ -1,0 +1,29 @@
+.text-center {
+    &__container {
+        width: 100%;
+        max-width: 73.125rem;
+        margin: 0 auto;
+
+        text-align: center;
+    }
+    &__headering {
+        font-size: 40px;
+        font-weight: 300;
+
+        margin-top: 1.4em;
+        margin-bottom: .2em;
+        padding-right: .1em;
+        //-заголовок сдвигает чуть влево
+
+        color: $color-active-light;
+        &-item {
+            text-transform: uppercase;
+        }
+    }
+    &__small-text {
+        font-size: .8rem;
+    }
+    &__item {
+        font-size: .875rem;
+    }
+}

@@ -1,0 +1,61 @@
+.breadcrumbs {
+    background-color: $color-background-darkt;
+    &__container {
+        position: relative;
+
+        width: 100%;
+        max-width: 73.125rem;
+        margin: 0 auto;
+        padding: 26px 0;
+
+        color: $color-main-slider;
+
+        @include inline-block-fix;
+
+        & > * {
+            width: 50%;
+        }
+        &::before {
+            //- уоголок breadcrumbs
+            position: absolute;
+            bottom: -1.7em;
+
+            content: '';
+
+            border: .9rem solid transparent;
+            border-top: .9rem solid $color-background-darkt;
+        }
+    }
+    &__headering {
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-style: normal;
+
+        padding-left: .4em;
+
+        text-transform: uppercase;
+    }
+    &__path {
+        text-align: right;
+    }
+    &__link {
+        font-size: .78rem;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        color: $color-heading-gray;
+        &:hover {
+            color: rgb(221, 52, 52);
+        }
+    }
+    &__link:not(:first-child)::before {
+        margin-right: .4em;
+        margin-left: .4em;
+        padding-right: .4em;
+
+        content: '/';
+
+        color: $color-heading-gray;
+    }
+}

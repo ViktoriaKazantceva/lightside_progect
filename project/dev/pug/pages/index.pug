@@ -1,4 +1,6 @@
 extends ../base/base.pug
+block vars
+    -var pageTitle = 'Home';
 block header
     include ../blocks/header_v2.pug
 block main
@@ -25,5 +27,5 @@ block main
         block mini_slider
             include ../blocks/mini_slider_block.pug
             
-        block mini_slider
-            include ../blocks/footer.pug
+block footer
+    include ../blocks/footer.pug

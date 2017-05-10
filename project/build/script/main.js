@@ -45,6 +45,29 @@ function hideSiteSearch() {
     $(".nav__input").css('display', 'none');
 };
 
+//страница about us
+//при наведении на картинку с портретом Jhon Doe появляется информация о человеке и кнопки социальных сетей
+
+// $(".team-item").hover(
+// function(){
+//     $(".team__img").css("display", "none");
+//     $(".team-item-active").css("display", "block");
+// },
+// function(){
+//     $(".team__img").css("display", "block");
+//     $(".team-item-active").css("display", "none");
+//  });
+// function setHoverColor(id) {
+//         $(".team__img").css("display", "none");
+//         $(".team-item-active").css("display", "block");
+// };
+// //при потере фокуса, иконка и кнопка становятся не активными - стандартный цвет
+// function unsetHoverColor(id) {
+//         $(".team__img").css("display", "block");
+//         $(".team-item-active").css("display", "none");
+// };
+
+
 
 //блок main_slider_block - подключение слайдера из библиотеки slick
 $(document).ready(function(){
